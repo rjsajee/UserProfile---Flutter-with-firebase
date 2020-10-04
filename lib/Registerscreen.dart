@@ -116,7 +116,7 @@ class _RegisterScreenState extends State<RegisterScreen> {
   }
 
   void createUser() async{
-    dynamic result = await _auth.createNewUser(_emailController.text, _passwordController.text);
+    dynamic result = await _auth.createNewUser(_nameController.text, _emailController.text, _passwordController.text);
     if(result == null){
       print("Email is not Valid");
     }else{

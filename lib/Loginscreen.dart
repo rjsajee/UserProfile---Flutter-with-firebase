@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:userprofile_demo/Dashboard.dart';
 import 'package:userprofile_demo/Registerscreen.dart';
 import 'package:userprofile_demo/Services/AutheticationServices.dart';
 
@@ -105,7 +106,7 @@ final AuthenticationServices _auth = AuthenticationServices();
     }else{
       _emailController.clear();
       _passwordController.clear();
-      print("Sign In Sucess");
+      Navigator.push(context, MaterialPageRoute(builder: (context) => Dashboard()));
     }
   }
 }
